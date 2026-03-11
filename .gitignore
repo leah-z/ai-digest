@@ -2,3 +2,4 @@
 __pycache__/
 *.pyc
 digest.log
+.DS_Store

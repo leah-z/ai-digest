@@ -55,9 +55,22 @@ PAYWALLED_DOMAINS = {
     "theathletic.com",
 }
 
+AI_KEYWORDS = {
+    "ai", "artificial intelligence", "machine learning", "deep learning",
+    "llm", "large language model", "gpt", "claude", "gemini", "chatgpt",
+    "copilot", "generative", "neural", "openai", "anthropic", "deepmind",
+    "automation", "agent", "chatbot", "nlp", "natural language", "foundation model",
+    "diffusion", "transformer", "mistral", "llama", "multimodal", "prompt",
+    "ml model", "ai model", "ai tool", "ai feature", "ai product",
+}
+
+def is_ai_related(title, desc):
+    """Return True if the article is related to AI."""
+    text = (title + " " + desc).lower()
+    return any(kw in text for kw in AI_KEYWORDS)
+
 def is_paywalled(link, desc):
     """Return True if the article is likely behind a paywall."""
-    # Check known paywalled domains
     for domain in PAYWALLED_DOMAINS:
         if domain in link:
             return True
@@ -93,6 +106,8 @@ def fetch_articles(seen_urls):
                 desc = re.sub(r"<[^>]+>", " ", desc).strip()
                 desc = " ".join(desc.split())[:600]
                 if is_paywalled(link, desc):
+                    continue
+                if not is_ai_related(entry.get("title", ""), desc):
                     continue
                 articles.append({
                     "source": source["name"],

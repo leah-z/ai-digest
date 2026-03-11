@@ -39,6 +39,8 @@ SOURCES = [
     {"name": "Sequoia Capital", "url": "https://www.sequoiacap.com/feed/"},
     {"name": "Stratechery", "url": "https://stratechery.com/feed/"},
     {"name": "Ars Technica", "url": "https://feeds.arstechnica.com/arstechnica/technology-lab"},
+    {"name": "Product Talk", "url": "https://www.producttalk.org/feed"},
+    {"name": "Every.to", "url": "https://every.to/chain-of-thought/feed"},
 ]
 
 # Domains known to paywall most content
@@ -366,7 +368,7 @@ def generate_html(items, date_str):
         </main>
 
         <footer>
-            <p>由 AI 自动生成 · 资讯来源：TechCrunch、The Verge、MIT Technology Review、Product Hunt、Lenny's Newsletter、Import AI、Sequoia Capital、Stratechery、Ars Technica</p>
+            <p>由 AI 自动生成 · 资讯来源：TechCrunch、The Verge、MIT Technology Review、Product Hunt、Lenny's Newsletter、Import AI、Sequoia Capital、Stratechery、Ars Technica、Product Talk、Every.to</p>
             <p style="margin-top:0.5rem;"><a href="index.html">← 查看往期日报</a></p>
         </footer>
     </div>

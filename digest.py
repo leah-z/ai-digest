@@ -67,18 +67,26 @@ def is_paywalled(link, desc):
 
 def fetch_articles(seen_urls):
     import re
+    from datetime import timedelta
+    cutoff = datetime.now(timezone.utc) - timedelta(days=7)
     articles = []
     for source in SOURCES:
         try:
             feed = feedparser.parse(source["url"])
-            # Take top entries per source, skip already-seen URLs
             added = 0
             for entry in feed.entries:
-                if added >= 2:
+                if added >= 3:
                     break
                 link = entry.get("link", "")
                 if link in seen_urls:
                     continue
+                # Skip articles older than 7 days if date is available
+                published = entry.get("published_parsed")
+                if published:
+                    import calendar
+                    pub_dt = datetime.fromtimestamp(calendar.timegm(published), tz=timezone.utc)
+                    if pub_dt < cutoff:
+                        continue
                 desc = entry.get("summary", entry.get("description", ""))
                 desc = re.sub(r"<[^>]+>", " ", desc).strip()
                 desc = " ".join(desc.split())[:600]

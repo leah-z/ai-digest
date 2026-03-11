@@ -41,6 +41,29 @@ SOURCES = [
     {"name": "Ars Technica", "url": "https://feeds.arstechnica.com/arstechnica/technology-lab"},
 ]
 
+# Domains known to paywall most content
+PAYWALLED_DOMAINS = {
+    "technologyreview.com",
+    "stratechery.com",
+    "wsj.com",
+    "ft.com",
+    "bloomberg.com",
+    "theinformation.com",
+    "economist.com",
+    "theathletic.com",
+}
+
+def is_paywalled(link, desc):
+    """Return True if the article is likely behind a paywall."""
+    # Check known paywalled domains
+    for domain in PAYWALLED_DOMAINS:
+        if domain in link:
+            return True
+    # Short description is a strong signal of a paywall teaser
+    if len(desc) < 150:
+        return True
+    return False
+
 
 def fetch_articles(seen_urls):
     import re
@@ -59,6 +82,8 @@ def fetch_articles(seen_urls):
                 desc = entry.get("summary", entry.get("description", ""))
                 desc = re.sub(r"<[^>]+>", " ", desc).strip()
                 desc = " ".join(desc.split())[:600]
+                if is_paywalled(link, desc):
+                    continue
                 articles.append({
                     "source": source["name"],
                     "title": entry.get("title", "").strip(),

@@ -21,13 +21,17 @@ SEEN_URLS_FILE = Path(__file__).parent / "seen_urls.json"
 
 
 def load_seen_urls():
-    if SEEN_URLS_FILE.exists():
-        return set(json.loads(SEEN_URLS_FILE.read_text()))
-    return set()
+    """Build seen URLs from article links in all published digest HTML files."""
+    import re
+    seen = set()
+    for html_file in OUTPUT_DIR.glob("????-??-??.html"):
+        content = html_file.read_text(encoding="utf-8")
+        seen.update(re.findall(r'<a href="(https?://[^"]+)" class="card-link"', content))
+    return seen
 
 
 def save_seen_urls(seen_urls):
-    SEEN_URLS_FILE.write_text(json.dumps(list(seen_urls), indent=2))
+    SEEN_URLS_FILE.write_text(json.dumps(sorted(seen_urls), indent=2))
 
 SOURCES = [
     {"name": "TechCrunch AI", "url": "https://techcrunch.com/category/artificial-intelligence/feed/"},

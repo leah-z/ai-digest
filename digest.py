@@ -21,13 +21,9 @@ SEEN_URLS_FILE = Path(__file__).parent / "seen_urls.json"
 
 
 def load_seen_urls():
-    """Load seen URLs from seen_urls.json, supplemented by any HTML digest files."""
+    """Build seen URLs from article links in all published digest HTML files."""
     import re
     seen = set()
-    # Primary source: seen_urls.json (tracks all previously fetched articles)
-    if SEEN_URLS_FILE.exists():
-        seen.update(json.loads(SEEN_URLS_FILE.read_text(encoding="utf-8")))
-    # Also scan HTML files in case seen_urls.json is out of sync
     for html_file in OUTPUT_DIR.glob("????-??-??.html"):
         content = html_file.read_text(encoding="utf-8")
         seen.update(re.findall(r'<a href="(https?://[^"]+)" class="card-link"', content))
@@ -486,11 +482,6 @@ def main():
         print("No new articles found. Exiting.")
         sys.exit(1)
 
-    # Record all fetched article URLs (not just published ones) so they won't be
-    # re-fetched on the next run, even if the AI didn't select them today.
-    seen_urls.update(a["link"] for a in articles)
-    save_seen_urls(seen_urls)
-
     items = generate_digest(articles)
     print(f"Selected {len(items)} articles.\n")
 
@@ -498,7 +489,7 @@ def main():
     output_file.write_text(html, encoding="utf-8")
     print(f"✓ Digest saved: {output_file}")
 
-    # Also record the published URLs (in case URL differs from fetched link)
+    # Record published URLs so they won't appear again
     seen_urls.update(item["url"] for item in items)
     save_seen_urls(seen_urls)
     print(f"✓ Recorded {len(items)} URLs to seen list ({len(seen_urls)} total)")

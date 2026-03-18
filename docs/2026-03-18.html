@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI日报 · 2026年03月18日</title>
+    <style>
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC",
+                         "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
+            background: #0f1117;
+            color: #e1e4e8;
+            min-height: 100vh;
+            padding: 2rem 1rem;
+            line-height: 1.7;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        header {
+            text-align: center;
+            margin-bottom: 3rem;
+            padding-bottom: 2rem;
+            border-bottom: 1px solid #21262d;
+        }
+
+        .header-label {
+            font-size: 0.8rem;
+            letter-spacing: 0.15em;
+            text-transform: uppercase;
+            color: #58a6ff;
+            margin-bottom: 0.75rem;
+        }
+
+        header h1 {
+            font-size: 2.2rem;
+            font-weight: 700;
+            color: #f0f6fc;
+            margin-bottom: 0.5rem;
+        }
+
+        .header-date {
+            color: #8b949e;
+            font-size: 0.95rem;
+        }
+
+        .header-sub {
+            margin-top: 0.75rem;
+            font-size: 0.9rem;
+            color: #8b949e;
+        }
+
+        .card {
+            display: flex;
+            gap: 1.25rem;
+            background: #161b22;
+            border: 1px solid #21262d;
+            border-radius: 12px;
+            padding: 1.5rem;
+            margin-bottom: 1.25rem;
+            transition: border-color 0.2s;
+        }
+
+        .card:hover {
+            border-color: #388bfd;
+        }
+
+        .card-number {
+            font-size: 1.8rem;
+            font-weight: 800;
+            color: #21262d;
+            min-width: 2.5rem;
+            text-align: right;
+            padding-top: 0.1rem;
+            user-select: none;
+        }
+
+        .card-content {
+            flex: 1;
+            min-width: 0;
+        }
+
+        .card-source {
+            font-size: 0.75rem;
+            letter-spacing: 0.08em;
+            text-transform: uppercase;
+            color: #58a6ff;
+            margin-bottom: 0.4rem;
+        }
+
+        .card-title-zh {
+            font-size: 1.15rem;
+            font-weight: 600;
+            color: #f0f6fc;
+            margin-bottom: 0.25rem;
+            line-height: 1.4;
+        }
+
+        .card-title-en {
+            font-size: 0.82rem;
+            color: #6e7681;
+            font-weight: 400;
+            margin-bottom: 0.9rem;
+            line-height: 1.4;
+        }
+
+        .card-summary {
+            font-size: 0.93rem;
+            color: #c9d1d9;
+            margin-bottom: 0.85rem;
+            line-height: 1.75;
+        }
+
+        .card-tip {
+            font-size: 0.88rem;
+            color: #e3b341;
+            background: rgba(227, 179, 65, 0.08);
+            border-left: 3px solid #e3b341;
+            padding: 0.6rem 0.85rem;
+            border-radius: 0 6px 6px 0;
+            margin-bottom: 1rem;
+            line-height: 1.6;
+        }
+
+        .card-link {
+            font-size: 0.83rem;
+            color: #58a6ff;
+            text-decoration: none;
+            font-weight: 500;
+        }
+
+        .card-link:hover {
+            text-decoration: underline;
+        }
+
+        footer {
+            text-align: center;
+            margin-top: 3rem;
+            padding-top: 2rem;
+            border-top: 1px solid #21262d;
+            color: #6e7681;
+            font-size: 0.82rem;
+        }
+
+        footer a {
+            color: #58a6ff;
+            text-decoration: none;
+        }
+
+        @media (max-width: 500px) {
+            .card-number { display: none; }
+            header h1 { font-size: 1.6rem; }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="header-label">AI Daily Digest · For Product Managers</div>
+            <h1>AI 日报</h1>
+            <div class="header-date">2026年03月18日 · March 18, 2026</div>
+            <div class="header-sub">今日精选 5 条 AI 资讯，专为产品经理策划</div>
+        </header>
+
+        <main>
+        <article class="card">
+            <div class="card-number">01</div>
+            <div class="card-content">
+                <div class="card-source">TechCrunch AI</div>
+                <h2 class="card-title-zh">Mistral推出‘自建AI’模式，对抗OpenAI和Anthropic在企业市场的竞争</h2>
+                <h3 class="card-title-en">Mistral bets on ‘build-your-own AI’ as it takes on OpenAI, Anthropic in the enterprise</h3>
+                <p class="card-summary">Mistral Forge允许企业在自己的数据基础上从零开始训练定制化的AI模型，这一举措对依赖微调和检索的竞争对手造成了挑战。</p>
+                <p class="card-tip">💡 PM视角：了解企业如何利用自定义AI模型来增加业务竞争优势。</p>
+                <a href="https://techcrunch.com/2026/03/17/mistral-forge-nvidia-gtc-build-your-own-ai-enterprise/" class="card-link" target="_blank" rel="noopener">阅读原文 →</a>
+            </div>
+        </article>
+        <article class="card">
+            <div class="card-number">02</div>
+            <div class="card-content">
+                <div class="card-source">TechCrunch AI</div>
+                <h2 class="card-title-zh">谷歌的个人智能功能现已向所有美国用户开放</h2>
+                <h3 class="card-title-en">Google’s Personal Intelligence feature is expanding to all US users</h3>
+                <p class="card-summary">谷歌的个人智能功能可以从用户的Gmail和Google Photos等服务中获取数据，以提供更加个性化的响应，现在美国的所有用户都可以访问这一功能。</p>
+                <p class="card-tip">💡 PM视角：关注用户体验和个性化服务的趋势，评估其对产品设计的影响。</p>
+                <a href="https://techcrunch.com/2026/03/17/googles-personal-intelligence-feature-is-expanding-to-all-us-users/" class="card-link" target="_blank" rel="noopener">阅读原文 →</a>
+            </div>
+        </article>
+        <article class="card">
+            <div class="card-number">03</div>
+            <div class="card-content">
+                <div class="card-source">The Verge AI</div>
+                <h2 class="card-title-zh">美国所有用户现可使用谷歌个性化的Gemini AI</h2>
+                <h3 class="card-title-en">Now everyone in the US is getting Google&#8217;s personalized Gemini AI</h3>
+                <p class="card-summary">谷歌宣布，现在所有美国用户都能使用其个性化的Gemini AI，这一功能之前仅限于特定订阅者，现在内容更加广泛。</p>
+                <p class="card-tip">💡 PM视角：观察如何通过AI优化用户的日常工具，以提升产品吸引力。</p>
+                <a href="https://www.theverge.com/ai-artificial-intelligence/896107/google-expands-personal-intelligence" class="card-link" target="_blank" rel="noopener">阅读原文 →</a>
+            </div>
+        </article>
+        <article class="card">
+            <div class="card-number">04</div>
+            <div class="card-content">
+                <div class="card-source">The Verge AI</div>
+                <h2 class="card-title-zh">微软在AI领导层重组后任命新的Copilot负责人</h2>
+                <h3 class="card-title-en">Microsoft appoints a new Copilot boss after AI leadership shake-up</h3>
+                <p class="card-summary">微软正在进行领导层的重新安排，旨在整合其Copilot助手的消费者和商业团队，以创建更统一的用户体验。</p>
+                <p class="card-tip">💡 PM视角：了解行业巨头如何通过组织结构调整来提高AI产品的整合能力，为我们的产品创新提供借鉴。</p>
+                <a href="https://www.theverge.com/news/895963/microsoft-copilot-leadership-changes-consumer-commercial" class="card-link" target="_blank" rel="noopener">阅读原文 →</a>
+            </div>
+        </article>
+        <article class="card">
+            <div class="card-number">05</div>
+            <div class="card-content">
+                <div class="card-source">The Verge AI</div>
+                <h2 class="card-title-zh">编程的未来既令人兴奋又令人恐惧</h2>
+                <h3 class="card-title-en">The future of code is exciting and terrifying</h3>
+                <p class="card-summary">随着越来越多的人使用Claude Code应用程序，软件开发的方式正快速变化，如今许多开发者更倾向于管理项目和代理，而不是自己编写代码。</p>
+                <p class="card-tip">💡 PM视角：关注开发模式的转变，为产品规划和团队结构优化提供指导。</p>
+                <a href="https://www.theverge.com/podcast/895910/claude-code-future-developers-vergecast" class="card-link" target="_blank" rel="noopener">阅读原文 →</a>
+            </div>
+        </article>
+        </main>
+
+        <footer>
+            <p>由 AI 自动生成 · 资讯来源：TechCrunch、The Verge、MIT Technology Review、Product Hunt、Lenny's Newsletter、Import AI、Sequoia Capital、Stratechery、Ars Technica、Product Talk、Every.to</p>
+            <p style="margin-top:0.5rem;"><a href="index.html">← 查看往期日报</a></p>
+        </footer>
+    </div>
+</body>
+</html>

@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI日报 · 2026年04月02日</title>
+    <style>
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC",
+                         "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
+            background: #0f1117;
+            color: #e1e4e8;
+            min-height: 100vh;
+            padding: 2rem 1rem;
+            line-height: 1.7;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        header {
+            text-align: center;
+            margin-bottom: 3rem;
+            padding-bottom: 2rem;
+            border-bottom: 1px solid #21262d;
+        }
+
+        .header-label {
+            font-size: 0.8rem;
+            letter-spacing: 0.15em;
+            text-transform: uppercase;
+            color: #58a6ff;
+            margin-bottom: 0.75rem;
+        }
+
+        header h1 {
+            font-size: 2.2rem;
+            font-weight: 700;
+            color: #f0f6fc;
+            margin-bottom: 0.5rem;
+        }
+
+        .header-date {
+            color: #8b949e;
+            font-size: 0.95rem;
+        }
+
+        .header-sub {
+            margin-top: 0.75rem;
+            font-size: 0.9rem;
+            color: #8b949e;
+        }
+
+        .card {
+            display: flex;
+            gap: 1.25rem;
+            background: #161b22;
+            border: 1px solid #21262d;
+            border-radius: 12px;
+            padding: 1.5rem;
+            margin-bottom: 1.25rem;
+            transition: border-color 0.2s;
+        }
+
+        .card:hover {
+            border-color: #388bfd;
+        }
+
+        .card-number {
+            font-size: 1.8rem;
+            font-weight: 800;
+            color: #21262d;
+            min-width: 2.5rem;
+            text-align: right;
+            padding-top: 0.1rem;
+            user-select: none;
+        }
+
+        .card-content {
+            flex: 1;
+            min-width: 0;
+        }
+
+        .card-source {
+            font-size: 0.75rem;
+            letter-spacing: 0.08em;
+            text-transform: uppercase;
+            color: #58a6ff;
+            margin-bottom: 0.4rem;
+        }
+
+        .card-title-zh {
+            font-size: 1.15rem;
+            font-weight: 600;
+            color: #f0f6fc;
+            margin-bottom: 0.25rem;
+            line-height: 1.4;
+        }
+
+        .card-title-en {
+            font-size: 0.82rem;
+            color: #6e7681;
+            font-weight: 400;
+            margin-bottom: 0.9rem;
+            line-height: 1.4;
+        }
+
+        .card-summary {
+            font-size: 0.93rem;
+            color: #c9d1d9;
+            margin-bottom: 0.85rem;
+            line-height: 1.75;
+        }
+
+        .card-tip {
+            font-size: 0.88rem;
+            color: #e3b341;
+            background: rgba(227, 179, 65, 0.08);
+            border-left: 3px solid #e3b341;
+            padding: 0.6rem 0.85rem;
+            border-radius: 0 6px 6px 0;
+            margin-bottom: 1rem;
+            line-height: 1.6;
+        }
+
+        .card-link {
+            font-size: 0.83rem;
+            color: #58a6ff;
+            text-decoration: none;
+            font-weight: 500;
+        }
+
+        .card-link:hover {
+            text-decoration: underline;
+        }
+
+        footer {
+            text-align: center;
+            margin-top: 3rem;
+            padding-top: 2rem;
+            border-top: 1px solid #21262d;
+            color: #6e7681;
+            font-size: 0.82rem;
+        }
+
+        footer a {
+            color: #58a6ff;
+            text-decoration: none;
+        }
+
+        @media (max-width: 500px) {
+            .card-number { display: none; }
+            header h1 { font-size: 1.6rem; }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="header-label">AI Daily Digest · For Product Managers</div>
+            <h1>AI 日报</h1>
+            <div class="header-date">2026年04月02日 · April 02, 2026</div>
+            <div class="header-sub">今日精选 5 条 AI 资讯，专为产品经理策划</div>
+        </header>
+
+        <main>
+        <article class="card">
+            <div class="card-number">01</div>
+            <div class="card-content">
+                <div class="card-source">The Verge AI</div>
+                <h2 class="card-title-zh">AI可以为你按Stream Deck按钮</h2>
+                <h3 class="card-title-en">AI can push your Stream Deck buttons for you</h3>
+                <p class="card-summary">Elgato发布的Stream Deck 7.4软件更新引入了模型上下文协议（MCP）支持，允许AI助手如Claude、ChatGPT和Nvidia G-Assist在操控Stream Deck设备时自动按按钮，从而提升了用户体验。</p>
+                <p class="card-tip">💡 PM视角：此功能提高了用户操作效率，可能会影响产品设计和用户交互方式。</p>
+                <a href="https://www.theverge.com/tech/905021/elgato-stream-deck-mcp-ai-agent-update" class="card-link" target="_blank" rel="noopener">阅读原文 →</a>
+            </div>
+        </article>
+        <article class="card">
+            <div class="card-number">02</div>
+            <div class="card-content">
+                <div class="card-source">The Verge AI</div>
+                <h2 class="card-title-zh">百度的机器人出租车在交通中冻结，造成混乱</h2>
+                <h3 class="card-title-en">Baidu’s robotaxis froze in traffic, creating chaos</h3>
+                <p class="card-summary">百度的Apollo Go机器人出租车在武汉市发生故障，导致乘客被困、交通拥堵并造成事故，显示了自动驾驶技术潜在的安全风险。</p>
+                <p class="card-tip">💡 PM视角：了解技术故障对用户体验的影响，重视安全性是产品开发的关键。</p>
+                <a href="https://www.theverge.com/ai-artificial-intelligence/905012/baidu-apollo-robotaxi-freeze-china" class="card-link" target="_blank" rel="noopener">阅读原文 →</a>
+            </div>
+        </article>
+        <article class="card">
+            <div class="card-number">03</div>
+            <div class="card-content">
+                <div class="card-source">The Verge AI</div>
+                <h2 class="card-title-zh">Galaxy S26的照片应用可以让你的记忆更加模糊</h2>
+                <h3 class="card-title-en">The Galaxy S26’s photo app can sloppify your memories</h3>
+                <p class="card-summary">Galaxy S26的照片应用引入AI编辑工具，用户可以通过自然语言指令进行创意编辑，展示了用户友好的AI集成功能。</p>
+                <p class="card-tip">💡 PM视角：AI驱动的用户体验提升应成为产品迭代的重要考虑点，可以吸引更多用户。</p>
+                <a href="https://www.theverge.com/tech/904176/samsung-galaxy-s26-ai-photo-assist-slop" class="card-link" target="_blank" rel="noopener">阅读原文 →</a>
+            </div>
+        </article>
+        <article class="card">
+            <div class="card-number">04</div>
+            <div class="card-content">
+                <div class="card-source">Product Talk</div>
+                <h2 class="card-title-zh">Vibe编码最佳实践：通过规划和代码审查避免死亡循环</h2>
+                <h3 class="card-title-en">Vibe Coding Best Practices: Avoid the Doom Loop with Planning and Code Reviews</h3>
+                <p class="card-summary">文章探讨了vibe编码的最佳实践，强调通过有效的规划与代码审查避免项目失败，以及保持良好的开发流程。</p>
+                <p class="card-tip">💡 PM视角：理解软件开发过程中的实践经验能够帮助改进团队的工作效率和产品质量。</p>
+                <a href="https://www.producttalk.org/vibe-coding-best-practices/" class="card-link" target="_blank" rel="noopener">阅读原文 →</a>
+            </div>
+        </article>
+        </main>
+
+        <footer>
+            <p>由 AI 自动生成 · 资讯来源：TechCrunch、The Verge、MIT Technology Review、Product Hunt、Lenny's Newsletter、Import AI、Sequoia Capital、Stratechery、Ars Technica、Product Talk、Every.to</p>
+            <p style="margin-top:0.5rem;"><a href="index.html">← 查看往期日报</a></p>
+        </footer>
+    </div>
+</body>
+</html>

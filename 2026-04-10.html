@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI日报 · 2026年04月10日</title>
+    <style>
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC",
+                         "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
+            background: #0f1117;
+            color: #e1e4e8;
+            min-height: 100vh;
+            padding: 2rem 1rem;
+            line-height: 1.7;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        header {
+            text-align: center;
+            margin-bottom: 3rem;
+            padding-bottom: 2rem;
+            border-bottom: 1px solid #21262d;
+        }
+
+        .header-label {
+            font-size: 0.8rem;
+            letter-spacing: 0.15em;
+            text-transform: uppercase;
+            color: #58a6ff;
+            margin-bottom: 0.75rem;
+        }
+
+        header h1 {
+            font-size: 2.2rem;
+            font-weight: 700;
+            color: #f0f6fc;
+            margin-bottom: 0.5rem;
+        }
+
+        .header-date {
+            color: #8b949e;
+            font-size: 0.95rem;
+        }
+
+        .header-sub {
+            margin-top: 0.75rem;
+            font-size: 0.9rem;
+            color: #8b949e;
+        }
+
+        .card {
+            display: flex;
+            gap: 1.25rem;
+            background: #161b22;
+            border: 1px solid #21262d;
+            border-radius: 12px;
+            padding: 1.5rem;
+            margin-bottom: 1.25rem;
+            transition: border-color 0.2s;
+        }
+
+        .card:hover {
+            border-color: #388bfd;
+        }
+
+        .card-number {
+            font-size: 1.8rem;
+            font-weight: 800;
+            color: #21262d;
+            min-width: 2.5rem;
+            text-align: right;
+            padding-top: 0.1rem;
+            user-select: none;
+        }
+
+        .card-content {
+            flex: 1;
+            min-width: 0;
+        }
+
+        .card-source {
+            font-size: 0.75rem;
+            letter-spacing: 0.08em;
+            text-transform: uppercase;
+            color: #58a6ff;
+            margin-bottom: 0.4rem;
+        }
+
+        .card-title-zh {
+            font-size: 1.15rem;
+            font-weight: 600;
+            color: #f0f6fc;
+            margin-bottom: 0.25rem;
+            line-height: 1.4;
+        }
+
+        .card-title-en {
+            font-size: 0.82rem;
+            color: #6e7681;
+            font-weight: 400;
+            margin-bottom: 0.9rem;
+            line-height: 1.4;
+        }
+
+        .card-summary {
+            font-size: 0.93rem;
+            color: #c9d1d9;
+            margin-bottom: 0.85rem;
+            line-height: 1.75;
+        }
+
+        .card-tip {
+            font-size: 0.88rem;
+            color: #e3b341;
+            background: rgba(227, 179, 65, 0.08);
+            border-left: 3px solid #e3b341;
+            padding: 0.6rem 0.85rem;
+            border-radius: 0 6px 6px 0;
+            margin-bottom: 1rem;
+            line-height: 1.6;
+        }
+
+        .card-link {
+            font-size: 0.83rem;
+            color: #58a6ff;
+            text-decoration: none;
+            font-weight: 500;
+        }
+
+        .card-link:hover {
+            text-decoration: underline;
+        }
+
+        footer {
+            text-align: center;
+            margin-top: 3rem;
+            padding-top: 2rem;
+            border-top: 1px solid #21262d;
+            color: #6e7681;
+            font-size: 0.82rem;
+        }
+
+        footer a {
+            color: #58a6ff;
+            text-decoration: none;
+        }
+
+        @media (max-width: 500px) {
+            .card-number { display: none; }
+            header h1 { font-size: 1.6rem; }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="header-label">AI Daily Digest · For Product Managers</div>
+            <h1>AI 日报</h1>
+            <div class="header-date">2026年04月10日 · April 10, 2026</div>
+            <div class="header-sub">今日精选 5 条 AI 资讯，专为产品经理策划</div>
+        </header>
+
+        <main>
+        <article class="card">
+            <div class="card-number">01</div>
+            <div class="card-content">
+                <div class="card-source">TechCrunch AI</div>
+                <h2 class="card-title-zh">ChatGPT推出每月100美元的Pro套餐</h2>
+                <h3 class="card-title-en">ChatGPT finally offers $100/month Pro plan</h3>
+                <p class="card-summary">OpenAI宣布推出每月100美元的ChatGPT Pro套餐，以满足高级用户的需求。相比之下，以前的套餐价格区间为20到200美元。</p>
+                <p class="card-tip">💡 PM视角：理解新定价策略对用户需求的影响，有助于调整产品定位和市场策略。</p>
+                <a href="https://techcrunch.com/2026/04/09/chatgpt-pro-plan-100-month-codex/" class="card-link" target="_blank" rel="noopener">阅读原文 →</a>
+            </div>
+        </article>
+        <article class="card">
+            <div class="card-number">02</div>
+            <div class="card-content">
+                <div class="card-source">The Verge AI</div>
+                <h2 class="card-title-zh">Google的Gemini AI能够生成3D模型和仿真回答问题</h2>
+                <h3 class="card-title-en">Google's Gemini AI can answer your questions with 3D models and simulations</h3>
+                <p class="card-summary">Google最新升级的Gemini可以生成互动3D模型和仿真，用户能够实时调整参数以获得不同结果。这一功能将极大提升用户体验和交互性。</p>
+                <p class="card-tip">💡 PM视角：关注新技术的应用场景，尤其是互动体验如何提升用户粘性。</p>
+                <a href="https://www.theverge.com/tech/909391/google-gemini-ai-3d-models-simulations" class="card-link" target="_blank" rel="noopener">阅读原文 →</a>
+            </div>
+        </article>
+        <article class="card">
+            <div class="card-number">03</div>
+            <div class="card-content">
+                <div class="card-source">TechCrunch AI</div>
+                <h2 class="card-title-zh">佛罗里达州检察长宣布对OpenAI进行调查，因枪击事件涉及ChatGPT</h2>
+                <h3 class="card-title-en">Florida AG announces investigation into OpenAI over shooting that allegedly involved ChatGPT</h3>
+                <p class="card-summary">佛罗里达州检察长表示，ChatGPT可能在一起导致两人死亡的枪击事件中起到了作用，计划对OpenAI展开调查。受害者家属也计划提起诉讼。</p>
+                <p class="card-tip">💡 PM视角：了解法律和伦理问题如何影响AI产品的开发与使用，有助于规避潜在风险。</p>
+                <a href="https://techcrunch.com/2026/04/09/florida-ag-investigation-openai-chatgpt-shooting/" class="card-link" target="_blank" rel="noopener">阅读原文 →</a>
+            </div>
+        </article>
+        <article class="card">
+            <div class="card-number">04</div>
+            <div class="card-content">
+                <div class="card-source">TechCrunch AI</div>
+                <h2 class="card-title-zh">Anthropic是否在限制Mythos发布以保护互联网或自身利益？</h2>
+                <h3 class="card-title-en">Is Anthropic limiting the release of Mythos to protect the internet — or Anthropic?</h3>
+                <p class="card-summary">Anthropic表示，出于安全考虑限制Mythos的发布，因其功能可能寻找出全球用户依赖的软件安全漏洞，外界对此提出质疑。</p>
+                <p class="card-tip">💡 PM视角：评估技术发布的影响和责任，尤其是在安全和道德方面的挑战，能帮助制定更为可持续的产品战略。</p>
+                <a href="https://techcrunch.com/2026/04/09/is-anthropic-limiting-the-release-of-mythos-to-protect-the-internet-or-anthropic/" class="card-link" target="_blank" rel="noopener">阅读原文 →</a>
+            </div>
+        </article>
+        <article class="card">
+            <div class="card-number">05</div>
+            <div class="card-content">
+                <div class="card-source">The Verge AI</div>
+                <h2 class="card-title-zh">佛罗里达州针对OpenAI展开调查</h2>
+                <h3 class="card-title-en">Florida launches investigation into OpenAI</h3>
+                <p class="card-summary">佛罗里达州检察长启动对OpenAI的调查，关注其数据和技术可能被敌对势力利用的问题，涉及公共安全与国家安全风险。</p>
+                <p class="card-tip">💡 PM视角：认识到政府监管对AI行业的影响，能够帮助产品经理更好地适应政策环境。</p>
+                <a href="https://www.theverge.com/policy/909557/openai-florida-investigation" class="card-link" target="_blank" rel="noopener">阅读原文 →</a>
+            </div>
+        </article>
+        </main>
+
+        <footer>
+            <p>由 AI 自动生成 · 资讯来源：TechCrunch、The Verge、MIT Technology Review、Product Hunt、Lenny's Newsletter、Import AI、Sequoia Capital、Stratechery、Ars Technica、Product Talk、Every.to</p>
+            <p style="margin-top:0.5rem;"><a href="index.html">← 查看往期日报</a></p>
+        </footer>
+    </div>
+</body>
+</html>

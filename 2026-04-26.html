@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI日报 · 2026年04月26日</title>
+    <style>
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC",
+                         "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
+            background: #0f1117;
+            color: #e1e4e8;
+            min-height: 100vh;
+            padding: 2rem 1rem;
+            line-height: 1.7;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        header {
+            text-align: center;
+            margin-bottom: 3rem;
+            padding-bottom: 2rem;
+            border-bottom: 1px solid #21262d;
+        }
+
+        .header-label {
+            font-size: 0.8rem;
+            letter-spacing: 0.15em;
+            text-transform: uppercase;
+            color: #58a6ff;
+            margin-bottom: 0.75rem;
+        }
+
+        header h1 {
+            font-size: 2.2rem;
+            font-weight: 700;
+            color: #f0f6fc;
+            margin-bottom: 0.5rem;
+        }
+
+        .header-date {
+            color: #8b949e;
+            font-size: 0.95rem;
+        }
+
+        .header-sub {
+            margin-top: 0.75rem;
+            font-size: 0.9rem;
+            color: #8b949e;
+        }
+
+        .card {
+            display: flex;
+            gap: 1.25rem;
+            background: #161b22;
+            border: 1px solid #21262d;
+            border-radius: 12px;
+            padding: 1.5rem;
+            margin-bottom: 1.25rem;
+            transition: border-color 0.2s;
+        }
+
+        .card:hover {
+            border-color: #388bfd;
+        }
+
+        .card-number {
+            font-size: 1.8rem;
+            font-weight: 800;
+            color: #21262d;
+            min-width: 2.5rem;
+            text-align: right;
+            padding-top: 0.1rem;
+            user-select: none;
+        }
+
+        .card-content {
+            flex: 1;
+            min-width: 0;
+        }
+
+        .card-source {
+            font-size: 0.75rem;
+            letter-spacing: 0.08em;
+            text-transform: uppercase;
+            color: #58a6ff;
+            margin-bottom: 0.4rem;
+        }
+
+        .card-title-zh {
+            font-size: 1.15rem;
+            font-weight: 600;
+            color: #f0f6fc;
+            margin-bottom: 0.25rem;
+            line-height: 1.4;
+        }
+
+        .card-title-en {
+            font-size: 0.82rem;
+            color: #6e7681;
+            font-weight: 400;
+            margin-bottom: 0.9rem;
+            line-height: 1.4;
+        }
+
+        .card-summary {
+            font-size: 0.93rem;
+            color: #c9d1d9;
+            margin-bottom: 0.85rem;
+            line-height: 1.75;
+        }
+
+        .card-tip {
+            font-size: 0.88rem;
+            color: #e3b341;
+            background: rgba(227, 179, 65, 0.08);
+            border-left: 3px solid #e3b341;
+            padding: 0.6rem 0.85rem;
+            border-radius: 0 6px 6px 0;
+            margin-bottom: 1rem;
+            line-height: 1.6;
+        }
+
+        .card-link {
+            font-size: 0.83rem;
+            color: #58a6ff;
+            text-decoration: none;
+            font-weight: 500;
+        }
+
+        .card-link:hover {
+            text-decoration: underline;
+        }
+
+        footer {
+            text-align: center;
+            margin-top: 3rem;
+            padding-top: 2rem;
+            border-top: 1px solid #21262d;
+            color: #6e7681;
+            font-size: 0.82rem;
+        }
+
+        footer a {
+            color: #58a6ff;
+            text-decoration: none;
+        }
+
+        @media (max-width: 500px) {
+            .card-number { display: none; }
+            header h1 { font-size: 1.6rem; }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="header-label">AI Daily Digest · For Product Managers</div>
+            <h1>AI 日报</h1>
+            <div class="header-date">2026年04月26日 · April 26, 2026</div>
+            <div class="header-sub">今日精选 5 条 AI 资讯，专为产品经理策划</div>
+        </header>
+
+        <main>
+        <article class="card">
+            <div class="card-number">01</div>
+            <div class="card-content">
+                <div class="card-source">TechCrunch AI</div>
+                <h2 class="card-title-zh">Anthropic创建了一个代理间交易的测试市场</h2>
+                <h3 class="card-title-en">Anthropic created a test marketplace for agent-on-agent commerce</h3>
+                <p class="card-summary">Anthropic最近实验性地创建了一个分类市场，其中AI代理代表买方和卖方，成功完成真实商品和资金的交易。</p>
+                <p class="card-tip">💡 PM视角：了解AI代理如何重塑商业交易将帮助产品经理识别新的市场机会。</p>
+                <a href="https://techcrunch.com/2026/04/25/anthropic-created-a-test-marketplace-for-agent-on-agent-commerce/" class="card-link" target="_blank" rel="noopener">阅读原文 →</a>
+            </div>
+        </article>
+        <article class="card">
+            <div class="card-number">02</div>
+            <div class="card-content">
+                <div class="card-source">TechCrunch AI</div>
+                <h2 class="card-title-zh">Cohere为何与Aleph Alpha合并</h2>
+                <h3 class="card-title-en">Why Cohere is merging with Aleph Alpha</h3>
+                <p class="card-summary">加拿大AI初创公司Cohere正在收购德国的Aleph Alpha，以提供对美国主导的AI市场的主权替代方案，得到了两国政府的支持。</p>
+                <p class="card-tip">💡 PM视角：收购与合并的动态可以影响产品策略和市场竞争格局，值得关注。</p>
+                <a href="https://techcrunch.com/2026/04/25/why-cohere-is-merging-with-aleph-alpha/" class="card-link" target="_blank" rel="noopener">阅读原文 →</a>
+            </div>
+        </article>
+        <article class="card">
+            <div class="card-number">03</div>
+            <div class="card-content">
+                <div class="card-source">The Verge AI</div>
+                <h2 class="card-title-zh">中国DeepSeek发布新AI模型预览，冲击美国竞争对手</h2>
+                <h3 class="card-title-en">China’s DeepSeek previews new AI model a year after jolting US rivals</h3>
+                <p class="card-summary">中国AI公司DeepSeek发布了其下一代AI模型V4的预览，声称该模型在编码能力上有重大改进，能够与美国的顶尖封闭源系统竞争。</p>
+                <p class="card-tip">💡 PM视角：关注国际AI竞争动态，可以为产品定位和技术选择提供重要参考。</p>
+                <a href="https://www.theverge.com/ai-artificial-intelligence/918035/deepseek-preview-v4-ai-model" class="card-link" target="_blank" rel="noopener">阅读原文 →</a>
+            </div>
+        </article>
+        <article class="card">
+            <div class="card-number">04</div>
+            <div class="card-content">
+                <div class="card-source">TechCrunch AI</div>
+                <h2 class="card-title-zh">OpenAI首席执行官向Tumbler Ridge社区道歉</h2>
+                <h3 class="card-title-en">OpenAI CEO apologizes to Tumbler Ridge community</h3>
+                <p class="card-summary">OpenAI首席执行官Sam Altman向加拿大Tumbler Ridge的居民道歉，因公司的失误未能及时通知执法部门关于一起近期的枪击案件的嫌疑人。</p>
+                <p class="card-tip">💡 PM视角：危机管理和舆论反应对产品经理在项目推行中的应对策略具有重要启示。</p>
+                <a href="https://techcrunch.com/2026/04/25/openai-ceo-apologizes-to-tumbler-ridge-community/" class="card-link" target="_blank" rel="noopener">阅读原文 →</a>
+            </div>
+        </article>
+        <article class="card">
+            <div class="card-number">05</div>
+            <div class="card-content">
+                <div class="card-source">Product Talk</div>
+                <h2 class="card-title-zh">预测未来 - 产品一切播客与Teresa Torres和Petra Wille</h2>
+                <h3 class="card-title-en">Predicting the Future - All Things Product Podcast with Teresa Torres & Petra Wille</h3>
+                <p class="card-summary">本期播客中，Teresa Torres和Petra Wille探讨了人们在预测未来方面的局限性，并强调了这对于产品经理的重要性。</p>
+                <p class="card-tip">💡 PM视角：理解对未来趋势的准确预见性对产品开发和定位至关重要，播客提供了重要见解。</p>
+                <a href="https://www.producttalk.org/predicting-the-future-all-things-product-podcast-with-teresa-torres-petra-wille/" class="card-link" target="_blank" rel="noopener">阅读原文 →</a>
+            </div>
+        </article>
+        </main>
+
+        <footer>
+            <p>由 AI 自动生成 · 资讯来源：TechCrunch、The Verge、MIT Technology Review、Product Hunt、Lenny's Newsletter、Import AI、Sequoia Capital、Stratechery、Ars Technica、Product Talk、Every.to</p>
+            <p style="margin-top:0.5rem;"><a href="index.html">← 查看往期日报</a></p>
+        </footer>
+    </div>
+</body>
+</html>

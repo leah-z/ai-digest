@@ -94,7 +94,7 @@ def fetch_articles(seen_urls):
             feed = feedparser.parse(source["url"])
             added = 0
             for entry in feed.entries:
-                if added >= 3:
+                if added >= 2:
                     break
                 link = entry.get("link", "")
                 if link in seen_urls:

@@ -12,7 +12,7 @@ The digest runs every day from `.github/workflows/digest.yml`.
 
 - Schedule: `0 0 * * *`, which is 8:00 AM in Singapore.
 - Manual runs: use **Actions -> Daily AI Digest -> Run workflow**.
-- Output: generated pages are committed back to `docs/`.
+- Output: generated pages are committed back to `docs/`, then published to the `gh-pages` branch used by GitHub Pages.
 
 Required repository secret:
 
@@ -50,7 +50,7 @@ python digest.py
 
 ## Publishing
 
-GitHub Pages can serve the static archive from the `docs/` folder.
+GitHub Pages serves the static archive from the `gh-pages` branch root. The daily workflow updates that branch from `docs/` after each successful digest run.
 
 ## Telegram
 

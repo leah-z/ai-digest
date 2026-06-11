@@ -5,30 +5,37 @@ on:
     - cron: '0 0 * * *'   # 8am Singapore time (UTC+8)
   workflow_dispatch:        # allows manual trigger from GitHub UI
 
+concurrency:
+  group: daily-ai-digest
+  cancel-in-progress: false
+
 jobs:
   generate:
     runs-on: ubuntu-latest
 
     permissions:
-      contents: write       # needed to commit docs/ and seen_urls.json back
+      contents: write       # needed to commit generated docs back
 
     steps:
       - name: Checkout repo
-        uses: actions/checkout@v4
-
-      - name: Set up Python
-        uses: actions/setup-python@v5
-        with:
-          python-version: '3.11'
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          git clone "https://x-access-token:${GH_TOKEN}@github.com/${GITHUB_REPOSITORY}.git" .
+          git checkout "${GITHUB_REF_NAME}"
 
       - name: Install dependencies
-        run: pip install feedparser python-dotenv
+        run: python3 -m pip install -r requirements.txt
 
       - name: Generate digest
         env:
           OPENROUTER_API_KEY: ${{ secrets.OPENROUTER_API_KEY }}
           OPENROUTER_MODEL: openai/gpt-4o-mini
-        run: python digest.py
+          DIGEST_TIMEZONE: Asia/Singapore
+          TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
+          TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
+          TZ: Asia/Singapore
+        run: python3 digest.py
 
       - name: Commit and push results
         run: |

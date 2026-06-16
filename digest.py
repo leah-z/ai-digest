@@ -28,6 +28,7 @@ TELEGRAM_CHAT_ID = os.getenv("TELEGRAM_CHAT_ID")
 
 OUTPUT_DIR = Path(__file__).parent / "docs"
 SEEN_URLS_FILE = Path(__file__).parent / "seen_urls.json"
+ARCHIVE_HIDE_ON_OR_BEFORE = "2026-05-15"
 MAX_FOLLOW_BUILDERS_TWEETS = 8
 MAX_FOLLOW_BUILDERS_PODCASTS = 3
 MAX_FOLLOW_BUILDERS_BLOGS = 3
@@ -597,6 +598,8 @@ def update_index(entries):
     """Rebuild the index page listing all past digests."""
     entries_html = ""
     for date_str, filename in sorted(entries, reverse=True):
+        if date_str <= ARCHIVE_HIDE_ON_OR_BEFORE:
+            continue
         date_obj = datetime.strptime(date_str, "%Y-%m-%d")
         date_display = date_obj.strftime("%Y年%m月%d日")
         date_en = date_obj.strftime("%B %d, %Y")

@@ -254,9 +254,9 @@ def generate_digest(articles):
 
     prompt = f"""你正在生成一份中文 AI Builders Digest。内容只来自 follow-builders 的中央 feed。
 请学习并遵守这个渲染结构：
-- 先放 X / TWITTER：每位 builder 的观点、产品发布、技术判断或行业洞察。
+- 先放 PODCASTS：播客单集的底线和关键洞察。
 - 再放 OFFICIAL BLOGS：AI 公司或 builder blog 的文章。
-- 最后放 PODCASTS：播客单集的底线和关键洞察。
+- 最后放 X / TWITTER：每位 builder 的观点、产品发布、技术判断或行业洞察。
 
 {articles_text}
 
@@ -370,9 +370,9 @@ def render_text_digest(digest, date_str):
     ]
 
     sections = [
-        ("X / TWITTER", digest.get("x", [])),
-        ("OFFICIAL BLOGS", digest.get("blogs", [])),
         ("PODCASTS", digest.get("podcasts", [])),
+        ("OFFICIAL BLOGS", digest.get("blogs", [])),
+        ("X / TWITTER", digest.get("x", [])),
     ]
     for title, items in sections:
         if not items:
@@ -396,9 +396,9 @@ def generate_html(digest, date_str):
     date_en = date_obj.strftime("%B %d, %Y")
 
     sections_html = "\n".join([
-        render_section_html("X / TWITTER", digest.get("x", [])),
-        render_section_html("OFFICIAL BLOGS", digest.get("blogs", [])),
         render_section_html("PODCASTS", digest.get("podcasts", [])),
+        render_section_html("OFFICIAL BLOGS", digest.get("blogs", [])),
+        render_section_html("X / TWITTER", digest.get("x", [])),
     ])
 
     return f"""<!DOCTYPE html>
